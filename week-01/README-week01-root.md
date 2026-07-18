@@ -1,3 +1,5 @@
+<brief introduction>
+Hi I am Tiffany Haynes a Financial Management Analyst who is looking to pivot into Cybersecurity. Currently I am enrolled in the CyberVisionaries Institute which will help me determine which path is the best for me and to gain a foundation of knowledge to be successful in the industry. I have secured the ISC2 CC certificate and I’m currently studying to pass the Security + exam. My goal is to use the knowledge that I gain from CyberVisinonaries Institute and other sources to land a role in Cybersecurity within a year.
 # Week 1 — Onboarding
 
 ---
