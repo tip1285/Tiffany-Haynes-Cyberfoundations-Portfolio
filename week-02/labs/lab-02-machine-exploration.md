@@ -96,9 +96,9 @@ Look at the current CPU usage percentage.
 
 Find how much RAM is currently in use, out of your total installed RAM (the same total you looked up in Part A).
 
-**RAM currently in use:** 116 GB
+**RAM currently in use:** 8.8 GB
 
-**Total installed RAM (from Part A):** 474 GB
+**Total installed RAM (from Part A):** 16 GB
 
 ### Step 6 — List Five Running Processes
 
