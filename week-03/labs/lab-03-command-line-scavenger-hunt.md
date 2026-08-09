@@ -66,59 +66,24 @@ For each of the three files you found in Part A, use `cat`/`type` to read it and
 Shift log contents:
 
 ```
-****Kept getting an error message****
-archivist@archive-room:/home/archivist$ pwd
-/home/archivist
-archivist@archive-room:/home/archivist$ ls
-README.md  operations  records
-archivist@archive-room:/home/archivist/operations$ cd operations
-archivist@archive-room:/home/archivist/operations$ ls
-ops-log  ops-notes
-archivist@archive-room:/home/archivist/operations$ ls ops-log
-shift-log.txt
-archivist@archive-room:/home/archivist/operations$ cat shift-log.txt
-cat: shift-log.txt: No such file or directory
+Shift Log - Foundry District Archive Room
+07:00 - Archive opened, no incidents overnight.
+15:00 - Routine filing complete.
 ```
 
 Maintenance note contents:
 
 ```
-***Kept getting an error message***
-archivist@archive-room:/home/archivist$ cd
-archivist@archive-room:/home/archivist$ pwd
-/home/archivist
-archivist@archive-room:/home/archivist$ ls
-README.md  operations  records
-archivist@archive-room:/home/archivist/records$ cd records
-archivist@archive-room:/home/archivist/records$ ls
-records-2024  records-2025
-archivist@archive-room:/home/archivist/records$ ls records-2025
-maintenance-note.txt
-archivist@archive-room:/home/archivist/records$ cat maintenance-note.txt
-cat: maintenance-note.txt: No such file or directory
-
+Maintenance Note - Conveyor belt 3 serviced, next check due in 90 days.
 ```
 
 Supply inventory contents:
 
 ```
-archivist@archive-room:/home/archivist$ pwd
-/home/archivist
-archivist@archive-room:/home/archivist$ ls
-README.md  operations  records
-archivist@archive-room:/home/archivist/records$ cd records
-archivist@archive-room:/home/archivist/records$ pwd
-/home/archivist/records
-archivist@archive-room:/home/archivist/records$ ls
-records-2024  records-2025
-archivist@archive-room:/home/archivist/records$ ls records-2024
-supply-inventory.txt
-archivist@archive-room:/home/archivist/records$ cat supply-inventory
-cat: supply-inventory: No such file or directory
-archivist@archive-room:/home/archivist/records$ cd supply-inventory
-bash: cd: supply-inventory: No such file or directory
-archivist@archive-room:/home/archivist/records$
-
+Supply Inventory - Q4 2024
+Gloves - 400 units
+Masks - 250 units
+Tape - 60 rolls
 ```
 
 ---
@@ -134,7 +99,7 @@ Create a new folder called `sorted-findings` in your home directory.
 Command you ran:
 
 ```
-(paste the command here)
+mkdir sorted-findings
 ```
 
 ### Step 2 — Move All Three Files Into It
@@ -144,7 +109,10 @@ Move the shift log, maintenance note, and supply inventory files — the same th
 Commands you ran:
 
 ```
-(paste the commands here)
+mv operations/ops-log/shift-log.txt sorted-findings/
+mv records/records-2025/maintenance-note.txt sorted-findings/
+mv records/records-2024/supply-inventory.txt sorted-findings/
+
 ```
 
 ### Step 3 — Confirm the Move
@@ -154,13 +122,13 @@ List the contents of `sorted-findings` to confirm all three files are now there.
 Command you ran:
 
 ```
-(paste the command here)
+ls sorted-findings
 ```
 
 Output:
 
 ```
-(paste the output here)
+maintenance-note.txt  shift-log.txt  supply-inventory.txt
 ```
 
 ---
@@ -176,13 +144,13 @@ When that happens, use `--help`, `man`, or `Get-Help` instead of guessing. Recor
 Command or term you looked up:
 
 ```
-(paste the command here)
+chmod --help
 ```
 
 What the help text (or the folder's contents) told you:
 
 ```
-(describe it in your own words here)
+It manages the updates to a file permission rings (read, write and execute).
 ```
 
 ### Step 2 — Describe a Wrong Turn
@@ -190,7 +158,7 @@ What the help text (or the folder's contents) told you:
 Everyone takes at least one wrong turn in a tree this size. Describe one moment you ended up somewhere unexpected, and how you used `pwd`/`Get-Location` and `cd ..` to recover.
 
 ```
-(your answer here — minimum 2 sentences)
+I actually got stuck on part B of this lab. I was on the right path but not exactly where I needed to be to run the cat command. The step I was missing was actually using the cd command to move into the specific folders where the contents were held for the following files (supply-inventory.txt, shift-log.txt and maintenance-note.txt). Once I used the cd command to move into the records and operations folders, then I was able to use the cat command.
 ```
 
 ---
@@ -218,7 +186,7 @@ I felt great and was actually excited to start this lab. I think it's pretty nea
 Week 4 moves from managing your own files to controlling who's allowed to do what to them — permissions — plus your first look at what a virtual machine is. Based on everything you've practiced this week, what's one thing you're curious about or looking forward to?
 
 ```
-(your answer here — minimum 2 sentences)
+I'm looking forward to actually changing and searching permissions. As someone who works a job where I have been assigned authority to execute certain things based on my level of experience/job title, it'll be interesting to see the other side or technical side of how that looks.
 ```
 
 ---
@@ -227,17 +195,17 @@ Week 4 moves from managing your own files to controlling who's allowed to do wha
 
 - [x] All three target files located, with full paths recorded (Part A)
 
-- [ ] All three target files read and their contents recorded (Part B)
+- [x] All three target files read and their contents recorded (Part B)
 
-- [ ] `sorted-findings` folder created and all three files moved into it, confirmed with a listing (Part C)
+- [x] `sorted-findings` folder created and all three files moved into it, confirmed with a listing (Part C)
 
-- [ ] At least one command or term looked up with `--help`/`man`/`Get-Help`, with what you learned recorded (Part D, Step 1)
+- [x] At least one command or term looked up with `--help`/`man`/`Get-Help`, with what you learned recorded (Part D, Step 1)
 
-- [ ] One wrong-turn moment described, including how you recovered (Part D, Step 2 — minimum 2 sentences)
+- [x] One wrong-turn moment described, including how you recovered (Part D, Step 2 — minimum 2 sentences)
 
-- [ ] All three Analysis Questions answered (minimum sentence counts met)
+- [x] All three Analysis Questions answered (minimum sentence counts met)
 
-- [ ] This file is committed to your portfolio repo at `week-03/labs/lab-03-command-line-scavenger-hunt.md`
+- [x] This file is committed to your portfolio repo at `week-03/labs/lab-03-command-line-scavenger-hunt.md`
 
 ---
 
