@@ -148,13 +148,13 @@ Before you go any further, make a backup copy of `investigation-notes.txt` calle
 Command you ran:
 
 ```
-cp investigation-notes.txt investigation-notes-bakcup.txt
+cp investigation-notes.txt investigation-notes-backup.txt
 ```
 
 Confirm both files now exist:
 
 ```
-Both files exist (investigation-nlsotes-backup.txt & investigation-notes.txt) including the access-log.txt
+Both files exist (investigation-notes-backup.txt & investigation-notes.txt) including the access-log.txt
 ```
 
 ---
