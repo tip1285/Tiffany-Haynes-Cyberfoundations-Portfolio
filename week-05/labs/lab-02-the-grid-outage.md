@@ -314,7 +314,7 @@ Pay attention to whether the **first hop** was the same in both. If traffic to t
 What the comparison tells you about where the problem is — and where it is not:
 
 ```
-The first stop is the same stop in both traces (10.20.5.1) which is the default gateway the door out of the community. The ip address for relay-station.grid.local is 10.20.5.30, which means it's on the same street as the workstation (10.20.5.42), just a different house. Why would the first hop for relay-station.grid.local be routed to the default gateway if it's not leaving the neighborhood? So, either the number associated with relay-station.grid.local has changed or there's something wrong with the machine.
+The first stop is the same stop in both traces (10.20.5.1) which is the default gateway the door out of the community. The ip address for relay-station.grid.local is 10.20.5.30, so the name resolves which shows that DNS is healthy and the first hop answers to the local network fine. There are stars after the first hop which means the issue lies after the gateway. 
 ```
 
 ---
@@ -367,7 +367,9 @@ You now know they're wrong. Being right is easy; being useful about it is a prof
 Your reply to your colleague:
 
 ```
-Hi Tonia, I wanted to follow-up on our conversation from earlier in regard to issues with the host relay-station.grid.local. You stated that you've seen this issue before and that it was a DNS problem, not a host problem. You also suggested that I check relay-station-old.grid.local since the name might be busted. 
+Hi Tonia, 
+
+I wanted to follow-up on our conversation from earlier in regard to issues with the host relay-station.grid.local. You stated that you've seen this issue before and that it was a DNS problem, not a host problem. You also suggested that I check relay-station-old.grid.local since the name might be busted. 
 
 Here are the commands that I ran for each and the results I found:
 
