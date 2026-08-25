@@ -86,7 +86,7 @@ Your prefix length and the subnet mask it means:
 /24 
 First 24 bits= the street, 0= house
 Mask: 255.255.255.0
-10.5.20=street/network (same for neighbors) 42= house/individual machine (just you)
+10.20.5=street/network (same for neighbors) 42= house/individual machine (just you)
 ```
 
 ### Step 4 — Find the Door Out
@@ -123,7 +123,7 @@ Put the three numbers together in plain English, the way you'd say it out loud t
 Your plain-English summary:
 
 ```
-My address is 10.5.20.42, my neighbors are everything that starts with 10.5.20.0/24, and anything outside that goes through 10.20.5.1.
+My address is 10.20.5.42, my neighbors are everything that starts with 10.20.5.0/24, and anything outside that goes through 10.20.5.1.
 ```
 
 ---
@@ -165,7 +165,7 @@ Two numbers in that output tell the story. **Packet loss** tells you whether the
 How many packets you sent, how many came back, and the typical round-trip time:
 
 ```
-4 packets transmitted, 4 packets received, rtt 1.000 ms
+4 packets transmitted, 4 packets received, rtt 1.150 ms
 ```
 
 ### Step 3 — Ping a Machine by Name
@@ -199,7 +199,7 @@ Look at the very first line of your Step 3 output. You typed a *name*, but ping 
 The number ping showed for `foundry-archive.grid.local`, and its packet loss and latency:
 
 ```
-10.20.5.20, 0% packet loss, rtt=2.000 ms
+10.20.5.20, 0% packet loss, rtt=2.150 ms
 ```
 
 ---
@@ -420,7 +420,7 @@ The first reason why there should be names is that the numbers change, they are 
 **Analysis Question 2.** Part A gave you three numbers: your address, your subnet mask, and your default gateway. Explain what the subnet mask lets your machine decide, and what your machine does with a packet when the answer to that decision is "not a neighbour." *(Minimum 3 sentences.)*
 
 ```
-Your machine is provided an Ip address which consists of 4 octets each divide by dots (ex. 10.5.20.5). The subnet mask helps you determine if an Ip address is a neighboring address or not. If the first 3 octets match your machine's, then that Ip address is on your street (ex. 10.5.20.16). If the subnet mask determines the address is outside of your neighborhood (ex.10.5.7.28) your machine sends it to the default gateway. If the address is a neighbor, then your machine sends the packet directly to the device on your street. If not, your machine sends the packet to the default gateway which is the door out of the neighborhood.
+Your machine is provided an Ip address which consists of 4 octets each divide by dots (ex. 10.20.5.5). The subnet mask helps you determine if an Ip address is a neighboring address or not. If the first 3 octets match your machine's, then that Ip address is on your street (ex. 10.20.5.16). If the subnet mask determines the address is outside of your neighborhood (ex.10.20.7.28) your machine sends it to the default gateway. If the address is a neighbor, then your machine sends the packet directly to the device on your street. If not, your machine sends the packet to the default gateway which is the door out of the neighborhood.
 ```
 
 **Analysis Question 3.** You asked the same three questions twice — once in bash, once in PowerShell — and got the same three answers. Why is it worth learning both sets of words rather than picking a favourite and ignoring the other? Answer in terms of the job, not the exam. *(Minimum 2 sentences.)*
