@@ -57,7 +57,7 @@ Scan the **Protocol** column from top to bottom and write down every distinct pr
 The protocols that appear in this capture:
 
 ```
-DNS, TMP, ICMP, HTTP, TLS
+DNS, TCP, ICMP, HTTP, TLS
 ```
 
 ### Step 3 — Read the Columns
@@ -95,7 +95,7 @@ One address appears more often than any other, and it's the one sending most of 
 The workstation's IP address, and how you worked out it was the workstation:
 
 ```
-10.5.20.42
+10.20.5.42
 I was able to determine it was the workstation's IP address since I recognized the number and on the very first row under the info column the name associated with the IP address was mentioned.
 ```
 
