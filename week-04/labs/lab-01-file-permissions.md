@@ -164,12 +164,24 @@ ls -l
 Output (the corrected permission string):
 
 ```
-rw-r----- 1 
+-rw-r----- 1 
 ```
 
 ### Step 4 — Capture Your Audit Evidence (REQUIRED screenshot)
 
-Run one final `ls -l` showing the whole folder with all three fixes in place, and take a screenshot of your simulator session showing it. **This screenshot is required — it is part of ★ Deliverable 1.** Name it `cli-permissions-audit.png`. You'll upload and embed it in the GitHub Commit section below.
+**Read this first — it will save you some confusion.** Every challenge in the CLI Simulator hands you a **fresh copy** of the Badge Office folder. That's deliberate: each challenge is its own clean exercise. You'll see `(fresh filesystem for this challenge)` on the divider line each time. It also means your fixes from earlier challenges will *not* still be showing when you reach the last one. Nothing you did was undone, and nothing you did was wrong — the folder was simply reset.
+
+So build your evidence listing **inside the last challenge**. Apply all three fixes there, one after another, then run one final `ls -l`:
+
+```
+chmod g-w master-inventory.txt
+chmod o-rw master-inventory.txt
+chmod u+x cleanup.sh
+chmod o-r badge-codes.txt
+ls -l
+```
+
+That one listing shows all three fixes together — that's your evidence. Take a screenshot of your simulator session showing it. **This screenshot is required — it is part of ★ Deliverable 1.** Name it `cli-permissions-audit.png`. You'll upload and embed it in the GitHub Commit section below.
 
 ---
 
@@ -201,6 +213,8 @@ Your plain-English translation:
 
 ```
 Morgan the owner of the file shift-notes.txt has the permission to read and write.
+The group has permission to read the file shift-notes.txt.
+Others have permission to read the file shift-notes.txt.
 ```
 
 ---
@@ -275,10 +289,6 @@ This lab's written answers are submitted through the **CyberFoundations Lab Port
 4. Click the uploaded image's filename to open it — the image itself will display on the page.
 5. Right-click directly on the image and choose **Copy image address** (Chrome/Edge) or **Copy Image Link** (Firefox).
 6. Edit this lab file and paste your copied link into the embed below, at the end of Part B:
-
-```markdown
-![Permissions audit — final ls -l](paste your copied image link here)
-```
 
 **If right-click doesn't show that option** (e.g., on some trackpads or tablets): click the small download-arrow icon in the top-right of the image preview instead, then copy the URL from your browser's address bar.
 
