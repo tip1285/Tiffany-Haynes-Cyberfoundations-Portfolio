@@ -128,7 +128,7 @@ One log is never the whole story. Re-run your search across **every** log file i
 Command you ran:
 
 ```
-grep -i denied* .log
+grep -i denied *.log
 
 ```
 
@@ -283,10 +283,6 @@ This lab's written answers are submitted through the **CyberFoundations Lab Port
 2. Click **Add file → Upload files**, drag in your screenshot named `cli-search-investigation.png` (lowercase, hyphens, no spaces), and click **Commit changes**.
 3. Click the uploaded image's filename to open it, then right-click directly on the image and choose **Copy image address** (Chrome/Edge) or **Copy Image Link** (Firefox).
 4. Edit this lab file and paste your copied link into the embed below, at the end of Part C:
-
-```markdown
-![Archive investigation — find, check, lock down](paste your copied image link here)
-```
 
 **If right-click doesn't show that option:** click the small download-arrow icon in the top-right of the image preview instead, then copy the URL from your browser's address bar.
 
