@@ -136,7 +136,7 @@ The number of hops your trace showed:
 The first hop's address — and one sentence on what that device is:
 
 ```
-The address for the first hop is syn-2603-6080-4df0-c880-0000-0000-0000-0001.res6.spectrum.com and that would be on my home router.
+The first hop's address belongs to my home router. The actual address is not provided for security reasons.
 ```
 
 ### Step 3 — Watch the Latency Climb
@@ -266,7 +266,7 @@ Look carefully at your screenshot from Part B, Step 5 and at anything you plan t
 What you found in your own output that needs covering — list each item:
 
 ```
-ISP name and computer's root folder
+ISP names, computer's root folder and my computer's hostname
 ```
 
 ### Step 2 — Cover It Properly
@@ -288,7 +288,7 @@ Two methods, both built into your operating system. **You are not installing an 
 Which method you used and what you covered:
 
 ```
-I drew a box over the text and filled it with the color black. Then I went on top of the black and used the color white.
+I drew a box over the text and redacted everything by filling the box with the color back.
 ```
 
 ### Step 3 — Re-Read Your Own Worksheet
@@ -300,7 +300,7 @@ Where a private local address like `192.168.1.14` is fine to publish (it means n
 What you changed in your typed answers, if anything:
 
 ```
-Nothing needed changing
+I went back and changed the answer to part B #2 (second question). The second question asked to provide the IP address of the first hop and to state what that IP address was for. The first hop belonged to my home router. At first, I provided the IP address but have since taken it off due to security reasons.
 ```
 
 ### Step 4 — Pre-Flight Checklist
@@ -344,7 +344,7 @@ The traceroute can tell me how long it takes to travel between each hop before r
 **Analysis Question 3.** Part D asked you to decide what was safe to publish. Walk through your own judgement: what did you choose to hide, what did you judge safe to leave visible, and how did you decide where the line was? Name one thing you deliberately left in and explain why it was safe. *(Minimum 4 sentences.)*
 
 ```
-The only thing I decided to hide was the first two lines/hops which showed an IP address associated with my service provider and a root folder on my computer. Everything else on the screen was safe to publish. Nothing on the screenshot showed my personal username, computer's host name or public IP address. The information I left visible was information that anyone can access, so it wasn't any personal info. I left the IP address to show the path of the hops and the rtt so you can see the time between each hop.
+I decided to hide almost everything on the screen: IP address, root folder and hostnames. There was really nothing on the screen that was safe to publish. The information I left visible was the number of hops, the rtt between each hop and the line that shows that the trace was complete. Leaving the information about how many hops took place and the rtt was safe because you can't tie that back to any personal information about my computer.
 ```
 
 ---
