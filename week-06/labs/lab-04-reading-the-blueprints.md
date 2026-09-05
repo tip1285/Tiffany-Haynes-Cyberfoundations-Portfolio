@@ -107,7 +107,7 @@ default via 10.60.6.1 dev eth0 proto dhcp src 10.60.6.33 metric 100
 What the default route tells you about traffic that is not destined for your own subnet:
 
 ```
-The default route tells you that the any traffic that gets routed out of my own subnet goes through the gateway 10.60.6.1.
+The default route tells you that the any traffic that gets routed outside of my own subnet goes through the gateway 10.60.6.1.
 ```
 
 ### Step 3 — Capture Your Evidence
@@ -135,7 +135,7 @@ Outbound internet traffic from your VM leaves through address **translation (NAT
 Explain both directions in your own words:
 
 ```
-So that machines with private addresses can hold conversations on the public internet, Network Address Translation (NAT) converts the address on traffic as it leaves and returns. The Azure Bastion is like your secured front desk, and this is the only way in to reach your machine. There is no public address used to reach the machine.
+So that a machine (VM) with a private address can hold a conversation on the public internet; the VM uses the Network Address Translation (NAT) which converts the private address to a shared public address as it leaves the machine to reach the internet. For inbound, no can reach the VM's private IP address directly; instead, the Azure Bastion is like your secured front desk which is the only way in to reach your machine. There is no public address used to reach the machine.
 ```
 
 ### Step 3 — The Guard Post You Do Not Touch Yet
@@ -147,7 +147,7 @@ Each student machine sits behind its own **network security group** — a per-st
 Write one sentence naming what the guard post does and one sentence stating what you are *not* doing with it this week:
 
 ```
-(your two sentences here)
+The Network security group or the guard post is responsible for evaluating the traffic based on a specific set of instructions. The guard post will either allow or deny access based on those instructions. This week we are not creating or configuring any rules for the guard post to evaluate traffic against.
 ```
 
 ---
@@ -157,19 +157,20 @@ Write one sentence naming what the guard post does and one sentence stating what
 **Analysis Question 1.** Why would an organization put every student machine in one small subnet instead of giving each machine a public address? *(Minimum 3 sentences.)*
 
 ```
-(your answer here — minimum 3 sentences)
+An organization would want to put every student machine in one small subnet instead of giving each machine a public address for two reasons: security purposes and organization. By grouping or keeping all the student machines on one small subnet reduces configuration errors. For security purposes, forcing traffic to cross a boundary before crossing over into another segment, there's a limit as to how far an issue can travel. The boundaries are where defenders can act: inspect, allow or deny traffic. 
 ```
 
 **Analysis Question 2.** Segmentation means separating a network into parts that cannot freely reach each other. Give one concrete benefit of segmentation during a security incident. *(Minimum 3 sentences.)*
 
 ```
-(your answer here — minimum 3 sentences)
+When a network is segmented into subnets, every boundary between floors becomes a control point. Defenders can inspect, allow, or deny traffic exactly where it crosses from one segment to another — rather than letting it flow unchecked through an open space. One concrete benefit of segmentation during a security incident is that the attackers would only have access to one segmented area and not to other areas within the system.
+
 ```
 
 **Analysis Question 3.** A diagram and a live machine disagree about an address range. Which do you trust, what do you do next, and why? *(Minimum 2 sentences.)*
 
 ```
-(your answer here — minimum 2 sentences)
+If a diagram and a live machine disagree about an address range, I would trust what the live machine states is the correct address range.  On the live machine, I would run the two commands ip addr and ip route which confirms what any diagram asserts. A diagram is just a claim about reality, and the live machine is the true source.
 ```
 
 ---
@@ -186,11 +187,11 @@ Write one sentence naming what the guard post does and one sentence stating what
 
 - [x] Private address / NAT / Bastion explained (Part C, Steps 1–2)
 
-- [ ] Per-student guard post identified — and explicitly not configured this week (Part C, Step 3)
+- [x] Per-student guard post identified — and explicitly not configured this week (Part C, Step 3)
 
-- [ ] All three Analysis Questions answered (minimum sentence counts met)
+- [x] All three Analysis Questions answered (minimum sentence counts met)
 
-- [ ] This file is committed to your portfolio repo at `week-06/labs/lab-04-reading-the-blueprints.md`
+- [x] This file is committed to your portfolio repo at `week-06/labs/lab-04-reading-the-blueprints.md`
 
 ---
 
