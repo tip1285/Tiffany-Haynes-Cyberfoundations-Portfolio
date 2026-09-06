@@ -155,13 +155,13 @@ The correct Allow rule stopped working even though it was never edited, that was
 **Analysis Question 2.** Why is diagnosing from evaluation order better than changing rules by trial and error? (Minimum 4 sentences.)
 
 ```text
-Diagnosing from evaluation order is better than changing rules by trial and error because you can pinpoint the root cause of the problem. If you follow the professional workflow protocol then reviewing the rules and their priority is part of the protocol. 
+Diagnosing from evaluation order is better than changing rules by trial and error because you can pinpoint the root cause of the problem. If you follow the professional workflow protocol then reviewing the rules and their priority is part of the protocol. Saving time is a big reason why you should diagnose from evaluation order. If you diagnose by trial and error then you can test things that don't necessarily need to be tested and potentially diagnose the wrong thing.
 ```
 
 **Analysis Question 3.** What made this failure safe and recoverable in the course environment? (Minimum 3 sentences.)
 
 ```text
-The failure was safe and recoverable in this course environment because 
+The failure was safe and recoverable because it was done in a secured environment. The VM is a sandbox; therefore, anything that happens within this environment doesn't spread to any other area within the operating system. So all of the rules that were created in this environment do not affect anything outside of it. 
 ```
 
 ## Submission Checklist
@@ -178,7 +178,7 @@ The failure was safe and recoverable in this course environment because
 
 - [x] Grid Beacon retested `ALLOWED` and Other Test Source retested `DENIED`
 
-- [ ] Incident note completed
+- [x] Incident note completed
 
 - [x] Protected priorities 100, 110, 120, and 1000 were not changed.
 
